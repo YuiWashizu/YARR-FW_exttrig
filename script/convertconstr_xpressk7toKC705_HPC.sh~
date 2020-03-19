@@ -1,0 +1,59 @@
+#!/bin/bash
+
+OUTPUT_KC705="./syn/kc705/constrs_kc705_ohio.xdc"
+INPUT="./syn/xpressk7/xpressk7-fmc-quad-dp-ohio.xdc"
+
+#cp $INPUT $OUTPUT_KC705
+
+sed -e "s/A8/AE29/g" \
+-e "s/A9/AD29/g" \
+-e "s/F8/AA30/g" \
+-e "s/F9/Y30/g" \
+-e "s/H11/AB30/g" \
+-e "s/H12/AB29/g" \
+-e "s/F12/AF30/g" \
+-e "s/G12/AE30/g" \
+-e "s/D8/AC30/g" \
+-e "s/D9/AC29/g" \
+-e "s/A15/AJ29/g" \
+-e "s/D16/AG28/g" \
+-e "s/D15/AG27/g" \
+-e "s/D11/AF28/g" \
+-e "s/E11/AE28/g" \
+-e "s/E12/AD26/g" \
+-e "s/AC26/AF21/g" \
+-e "s/E13/AC26/g" \
+-e "s/C18/AK28/g" \
+-e "s/C17/AJ27/g" \
+-e "s/D13/AH30/g" \
+-e "s/D14/AG30/g" \
+-e "s/E17/AD28/g" \
+-e "s/D24/AB20/g" \
+-e "s/D23/AA20/g" \
+-e "s/P18/AD24/g" \
+-e "s/R18/AC24/g" \
+-e "s/T25/AF25/g" \
+-e "s/T24/AE25/g" \
+-e "s/V24/AH25/g" \
+-e "s/V23/AG25/g" \
+-e "s/M20/AD22/g" \
+-e "s/N19/AC22/g" \
+-e "s/U22/AJ24/g" \
+-e "s/AB26/AF20/g" \
+-e "s/K26/AJ23/g" \
+-e "s/K25/AJ22/g" \
+-e "s/M26/AH20/g" \
+-e "s/N26/AG20/g" \
+-e "s/R23/AE24/g" \
+-e "s/R22/AD23/g" \
+-e "s/W26/AJ21/g" \
+-e "s/W25/AH21/g" \
+-e "s/W20/AK20/g" \
+-e "s/M24/AG22/g" \
+-e "s/L24/AH22/g" \
+-e "s/T20/AB24/g" \
+-e "s/R20/AC25/g" \
+-e "s/A15/AJ29/g"  $INPUT > $OUTPUT_KC705
+
+echo "Done!"
+
